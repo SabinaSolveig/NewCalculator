@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">New Calculator</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_0">0</string>
+    <string name="_Div">/</string>
+    <string name="_Mul">*</string>
+    <string name="_Sub">-</string>
+    <string name="_Add">+</string>
+    <string name="_Dot">.</string>
+    <string name="_Equal">=</string>
+    <string name="_Clear">C</string>
+    <string name="_ToggleSign">+/-</string>
+    <string name="_Percent">%</string>
+    <string name="_BackSpace">BS</string>
+    <string name="_Return">Перейти к приложению</string>
+    <string name="_buttonChooseTheme">Выбрать тему приложения</string>
+    <string name="red_style">Red Style</string>
+    <string name="marine_style">Marine Style</string>
+    <string name="midnight_style">Midnight Style</string>
 </resources>
