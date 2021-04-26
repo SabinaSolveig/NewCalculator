@@ -1,9 +1,12 @@
 package com.example.newcalculator;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.math.BigDecimal;
 import java.util.Formatter;
 
-public class CalculatorActions {
+public class CalculatorActions implements Parcelable {
     private double curArg;
     private double firstArg;
     private double secondArg;
@@ -26,7 +29,46 @@ public class CalculatorActions {
         state = State.FIRST_ARG_INPUT;
     }
 
-    public void onNumPressed(int buttonId) {
+    protected CalculatorActions(Parcel in) {
+        curArg = in.readDouble();
+        firstArg = in.readDouble();
+        secondArg = in.readDouble();
+        operation = (char) in.readInt();
+        isFractional = in.readByte() != 0;
+        fractionalDigit = in.readInt();
+        actionSelected = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeDouble(curArg);
+        dest.writeDouble(firstArg);
+        dest.writeDouble(secondArg);
+        dest.writeInt((int) operation);
+        dest.writeByte((byte) (isFractional ? 1 : 0));
+        dest.writeInt(fractionalDigit);
+        dest.writeInt(actionSelected);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<CalculatorActions> CREATOR = new Creator<CalculatorActions>() {
+        @Override
+        public CalculatorActions createFromParcel(Parcel in) {
+            return new CalculatorActions(in);
+        }
+
+        @Override
+        public CalculatorActions[] newArray(int size) {
+            return new CalculatorActions[size];
+        }
+    };
+
+    public void onNumPressed(int num) {
+    //public void onNumPressed(int buttonId) {
         if (state == State.RESULT_SHOW) {
             state = State.FIRST_ARG_INPUT;
             curArg = 0;
@@ -37,7 +79,14 @@ public class CalculatorActions {
         }
 
         if (String.format("%." + fractionalDigit + "f", curArg).length() < 15) {
-            switch (buttonId) {
+            if (num == 0) {
+                if (curArg != 0) {
+                    currentArgAdd(num);
+                }
+            } else {
+                currentArgAdd(num);
+            }
+            /*switch (buttonId) {
                 case R.id.button0:
                     if (curArg != 0) {
                         currentArgAdd(0);
@@ -70,7 +119,7 @@ public class CalculatorActions {
                 case R.id.button9:
                     currentArgAdd(9);
                     break;
-            }
+            }*/
         }
     }
 

@@ -13,9 +13,9 @@
     <color name="colorPrimaryRed">#FF9800</color>
     <color name="colorPrimaryVariantRed">#DEB887</color>
     <color name="colorPrimaryDarkRed">#F57C00</color>
-    <color name="colorPrimaryMarine">#4862A5</color>
-    <color name="colorPrimaryVariantMarine">#B0C4DE</color>
-    <color name="colorPrimaryDarkMarine">#191970</color>
+    <color name="colorPrimaryMarine">#2196f3</color>
+    <color name="colorPrimaryVariantMarine">#e3f2fd</color>
+    <color name="colorPrimaryDarkMarine">#0069c0</color>
     <color name="colorPrimaryMidnight">#191970</color>
     <color name="colorPrimaryVariantMidnight">#708090</color>
     <color name="colorPrimaryDarkMidnight">#00FFFF</color>
@@ -24,4 +24,19 @@
     <color name="indigo_700">#303F9F</color>
     <color name="indigo_100">#C5CAE9</color>
     <color name="pink_100">#FF80AB</color>
+    <color name="light_indigo_500">#c5cae9</color>
+    <color name="light_indigo_700">#6f79a8</color>
+    <color name="light_indigo_100">#f8fdff</color>
+    <color name="night_indigo_500">#303030</color>
+    <color name="night_indigo_900">#212121</color>
+    <color name="night_indigo_100">#f8fdff</color>
+    <color name="night_indigo_800">#424242</color>
+    <color name="blue_grey_500">#607D8B</color>
+    <color name="blue_grey_800">#37474F</color>
+    <color name="blue_grey_100">#CFD8DC</color>
+    <color name="blue_grey_300">#90A4AE</color>
+    <color name="light_blue_500">#03A9F4</color>
+    <color name="light_blue_900">#01579B</color>
+    <color name="light_blue_100">#B3E5FC</color>
+    <color name="light_blue_200">#81D4FA</color>
 </resources>
