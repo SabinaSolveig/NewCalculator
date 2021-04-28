@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="textSize">24sp</dimen>
+    <dimen name="textSize">28sp</dimen>
+    <dimen name="calcButtonSize">24sp</dimen>
     <dimen name="buttonRadius">30pt</dimen>
 </resources>

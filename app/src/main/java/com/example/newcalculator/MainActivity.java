@@ -1,10 +1,14 @@
 package com.example.newcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
         calculator = new CalculatorActions();
 
-        View.OnClickListener numberButtonClickListener = view -> {
+        /*View.OnClickListener numberButtonClickListener = view -> {
             calculator.onNumPressed(view.getId());
             operation.setText(calculator.getOperation());
             text.setText(calculator.getText());
-        };
+        };*/
 
         View.OnClickListener actionButtonClickListener = view -> {
             calculator.onActionPressed(view.getId());
@@ -63,7 +67,13 @@ public class MainActivity extends AppCompatActivity {
         };
 
         for (int i = 0; i < numberIds.length; i++) {
-            findViewById(numberIds[i]).setOnClickListener(numberButtonClickListener);
+            //findViewById(numberIds[i]).setOnClickListener(numberButtonClickListener);
+            int index = i;
+            findViewById(numberIds[i]).setOnClickListener( view -> {
+                calculator.onNumPressed(index);
+                operation.setText(calculator.getOperation());
+                text.setText(calculator.getText());
+            });
         }
 
         for (int i = 0; i < actionsIds.length; i++) {
