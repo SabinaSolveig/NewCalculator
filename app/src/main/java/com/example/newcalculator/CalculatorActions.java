@@ -68,7 +68,6 @@ public class CalculatorActions implements Parcelable {
     };
 
     public void onNumPressed(int num) {
-    //public void onNumPressed(int buttonId) {
         if (state == State.RESULT_SHOW) {
             state = State.FIRST_ARG_INPUT;
             curArg = 0;
@@ -86,40 +85,6 @@ public class CalculatorActions implements Parcelable {
             } else {
                 currentArgAdd(num);
             }
-            /*switch (buttonId) {
-                case R.id.button0:
-                    if (curArg != 0) {
-                        currentArgAdd(0);
-                    }
-                    break;
-                case R.id.button1:
-                    currentArgAdd(1);
-                    break;
-                case R.id.button2:
-                    currentArgAdd(2);
-                    break;
-                case R.id.button3:
-                    currentArgAdd(3);
-                    break;
-                case R.id.button4:
-                    currentArgAdd(4);
-                    break;
-                case R.id.button5:
-                    currentArgAdd(5);
-                    break;
-                case R.id.button6:
-                    currentArgAdd(6);
-                    break;
-                case R.id.button7:
-                    currentArgAdd(7);
-                    break;
-                case R.id.button8:
-                    currentArgAdd(8);
-                    break;
-                case R.id.button9:
-                    currentArgAdd(9);
-                    break;
-            }*/
         }
     }
 
