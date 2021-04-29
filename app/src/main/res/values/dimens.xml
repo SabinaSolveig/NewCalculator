@@ -2,5 +2,10 @@
 <resources>
     <dimen name="textSize">28sp</dimen>
     <dimen name="calcButtonSize">24sp</dimen>
+    <dimen name="textButtonSize">18sp</dimen>
     <dimen name="buttonRadius">30pt</dimen>
+    <dimen name="margin_right">5dp</dimen>
+    <dimen name="margin_bottom">15dp</dimen>
+    <dimen name="margin_top">20dp</dimen>
+    <dimen name="margin_left">5dp</dimen>
 </resources>

@@ -20,9 +20,9 @@
     <string name="_ToggleSign">+/-</string>
     <string name="_Percent">%</string>
     <string name="_BackSpace">BS</string>
-    <string name="_Return">Перейти к приложению</string>
-    <string name="_buttonChooseTheme">Выбрать тему приложения</string>
+    <string name="_Return">Return</string>
+    <string name="_buttonChooseTheme">Themes</string>
     <string name="red_style">Red Style</string>
-    <string name="marine_style">Marine Style</string>
-    <string name="midnight_style">Midnight Style</string>
+    <string name="blue_grey_style">Blue Grey Style</string>
+    <string name="light_blue_style">Light Blue Style</string>
 </resources>
